@@ -1,4 +1,4 @@
-# emil-syntax-highlight README
+# odil, syntax highlight for emil
 
 Syntax highlight for .emil files.
 
