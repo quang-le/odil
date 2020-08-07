@@ -22,8 +22,28 @@ Download the [grammar file](https://github.com/quang-le/odil/blob/master/vscode/
 
 Unfortunately, the grammar is currently available in `.json` format only
 
-## Next imporovements
+## Using the script (zsh only)
+
+Download the [emil script](https://github.com/quang-le/odil/blob/master/emil). Add it to your `$PATH` and give it permissions by running `chmod 755 [path to emil script]` in your terminal.
+
+The script needs to be run in the root folder of the project for which you wish to generate the `.emil` file.
+
+You can simply run : `emil`, and the script will generate a file `current.emil`in your project source folder, then open it with VSCode
+
+# Specify file name:
+
+`emil [path-to-folder/file-name-without-extension]`. For example: `emil ~/emil/current_project_schema` will generate a file called `current-project-schema.emil` in the folder `~/emil/`
+
+# Specify IDE
+
+With Eclipse and VSCode only.
+
+`emil eclipse path-to-folder/file-name` will create your file, and open it with Eclipse. For this to work, you will need to save the path to the eclipse executable in an environment variable named `$ECLIPSE`. Without second argument, it will generate a `current.emil` file, like the default setting.
+
+## Next improvements
 
 [ ] Have the syntax in `.xml` format
+
+[ ] Have dedicated script for each IDE
 
 [ ] Optimize grammar for all themes
