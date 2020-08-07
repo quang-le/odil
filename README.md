@@ -20,7 +20,7 @@ Follow the instructions in [this guide](https://github.com/quang-le/odil/blob/ma
 
 Download the [grammar file](https://github.com/quang-le/odil/blob/master/vscode/odil-extension/syntaxes/emil.tmLanguage.json) and follow the procedure of your IDE.
 
-Unfortunately, the grammar is currently available in `.json` format
+Unfortunately, the grammar is currently available in `.json` format only
 
 ## Next imporovements
 
