@@ -1,0 +1,39 @@
+{
+    "name": "odil",
+    "publisher": "Quang",
+    "displayName": "Emil Syntax Highlight",
+    "description": "Syntax Highlight for Extended MIL",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.47.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/quang-le/odil.git"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "emil",
+                "aliases": [
+                    "EMIL",
+                    "emil"
+                ],
+                "extensions": [
+                    ".emil"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "emil",
+                "scopeName": "source.emil",
+                "path": "./syntaxes/emil.tmLanguage.json"
+            }
+        ]
+    }
+}

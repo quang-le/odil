@@ -1,0 +1,81 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "EMIL",
+    "patterns": [
+        {
+            "include": "#method"
+        },
+        {
+            "include": "#annotation"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#event"
+        },
+        {
+            "include": "#aggregate"
+        },
+        {
+            "include": "#commandMarker"
+        },
+        {
+            "include": "#markers"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.emil",
+                    "match": "\\b(F|Ru|Re|P)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.emil",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.emil",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "command": {
+            "name": "variable.other.property.emil",
+            "match": "\\b([A-Z][a-z][a-zA-Z]*)\\b\\?"
+        },
+        "event": {
+            "name": "variable.other.property.emil",
+            "match": "\\b([A-Z][a-z][a-zA-Z]*)\\b"
+        },
+        "aggregate": {
+            "name": "support.function.emil",
+            "match": "@\\b([A-Z][a-z][a-zA-Z]*)\\b"
+        },
+        "annotation": {
+            "name": "string.quoted.double.emil",
+            "match": "(?<=\\[)\\b([a-zA-Z][a-z][a-zA-Z]*)\\b(?=\\])"
+        },
+        "method": {
+            "name": "constant.numeric.decimal.emil",
+            "match": "(?<=\\{)\\b([a-zA-Z][a-z][a-zA-Z]*)\\b(?=\\})"
+        },
+        "commandMarker": {
+            "name": "support.function.emil",
+            "match": "\\?"
+        },
+        "markers": {
+            "name": "keyword.control.emil",
+            "match": "\\!|\\#"
+        }
+    },
+    "scopeName": "source.emil",
+    "fileTypes": [".emil"]
+}
