@@ -1,0 +1,34 @@
+#!/bin/zsh
+ECLIPSEIDE="eclipse"
+VSCODE="vscode"
+
+# Path to eclipse executable should be defined as $ECLIPSE env var
+if [[ $1 = $ECLIPSEIDE ]];then
+    if ((${+2}));then
+        mvn org.pousse-cafe-framework:pousse-cafe-maven-plugin:0.15.0-SNAPSHOT:export-process |& tee "$2.emil"
+        $ECLIPSE --launcher.openFile "$2.emil"
+        exit 0
+    else
+        mvn org.pousse-cafe-framework:pousse-cafe-maven-plugin:0.15.0-SNAPSHOT:export-process |& tee current.emil
+        $ECLIPSE --launcher.openFile emil.emil
+        exit 0
+    fi
+elif [[ $1 = $VSCODE ]];then
+     if ((${+2}));then
+        mvn org.pousse-cafe-framework:pousse-cafe-maven-plugin:0.15.0-SNAPSHOT:export-process |& tee "$2.emil"
+        code "$2.emil"
+        exit 0
+    else
+        mvn org.pousse-cafe-framework:pousse-cafe-maven-plugin:0.15.0-SNAPSHOT:export-process |& tee emil.emil
+        code emil.emil
+        exit 0
+    fi
+elif ((${+1}));then
+    mvn org.pousse-cafe-framework:pousse-cafe-maven-plugin:0.15.0-SNAPSHOT:export-process |& tee "$1.emil"
+    code "$1.emil"
+    exit 0
+else
+    mvn org.pousse-cafe-framework:pousse-cafe-maven-plugin:0.15.0-SNAPSHOT:export-process |& tee current.emil
+    code emil.emil
+    exit 0
+fi
