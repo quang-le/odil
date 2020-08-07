@@ -3,7 +3,7 @@
     "publisher": "Quang",
     "displayName": "Emil Syntax Highlight",
     "description": "Syntax Highlight for Extended MIL",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.47.0"
     },
